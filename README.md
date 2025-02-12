@@ -4,10 +4,10 @@
 
 Backend: (Java)
 Spring Boot
-Spring JPA
-Spring MVC
-Spring Security
-Spring Session
+/Spring JPA
+/Spring MVC
+/Spring Security
+/Spring Session
 
 - Build tool: Maven
 
