@@ -12,4 +12,13 @@ public class HelloController {
         return "Hello world with Spring Boot!";
     }
 
+    @GetMapping("/user")
+    public String userPage() {
+        return "User can access this page!";
+    }
+
+    @GetMapping("/admin")
+    public String adminPage() {
+        return "Admin can access this page!";
+    }
 }
