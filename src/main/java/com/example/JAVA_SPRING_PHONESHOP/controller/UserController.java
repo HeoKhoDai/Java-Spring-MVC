@@ -18,6 +18,6 @@ public class UserController {
 
     public String getHomePage() {
         String test = userService.handleHelloWorld();
-        return "index.html";
+        return "hello";
     }
 }
