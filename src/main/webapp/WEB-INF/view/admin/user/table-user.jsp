@@ -34,16 +34,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>Khanh</td>
-                                        <td>Khanh</td>
-                                        <td>
-                                            <button class="btn btn-success">View</button>
-                                            <button class="btn btn-warning">View</button>
-                                            <button class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
+                                    <c:forEach var="user" items="${users}">
+                                        <tr>
+                                            <th>${user.id}</th>
+                                            <td>${user.email}</td>
+                                            <td>${user.fullName}</td>
+                                            <td>
+                                                <a href="/admin/user/${user.id}" class="btn btn-success">View</a>
+                                                <button class="btn btn-warning">Update</button>
+                                                <button class="btn btn-danger">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+
                                 </tbody>
                             </table>
                         </div>
