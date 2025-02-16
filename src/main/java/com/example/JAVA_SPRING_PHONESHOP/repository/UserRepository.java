@@ -11,6 +11,8 @@ import com.example.JAVA_SPRING_PHONESHOP.domain.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User save(User user);
 
+    void deleteById(long id);
+
     List<User> findAll();
 
     User findById(long id);

@@ -13,6 +13,7 @@ import com.example.JAVA_SPRING_PHONESHOP.domain.User;
 import com.example.JAVA_SPRING_PHONESHOP.repository.UserRepository;
 import com.example.JAVA_SPRING_PHONESHOP.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
@@ -68,15 +69,30 @@ public class UserController {
         return "admin/user/update";
     }
 
-    @PostMapping("/admin/user/update/{id}")
+    @PostMapping("/admin/user/update")
     public String postUpdateUser(Model model, @ModelAttribute("newUser") User user) {
         User currrentUser = this.userService.getUserById(user.getId());
         if (currrentUser != null) {
             currrentUser.setAddress(user.getAddress());
             currrentUser.setFullName(user.getFullName());
             currrentUser.setPhone(user.getPhone());
-            this.userService.handleSaveUser(user);
+            this.userService.handleSaveUser(currrentUser);
         }
-        return "admin/user/update";
+        return "redirect:/admin/user";
+    }
+
+    @GetMapping("/admin/user/delete/{id}")
+    public String getDeleteUserPage(Model model, @PathVariable long id) {
+        model.addAttribute("id", id);
+        // User user = new User();
+        // user.setId(id);
+        model.addAttribute("newUser", new User());
+        return "admin/user/delete";
+    }
+
+    @PostMapping("/admin/user/delete")
+    public String postDeleteUser(Model model, @ModelAttribute("newUser") User user) {
+        this.userService.deleteAUser(user.getId());
+        return "redirect:/admin/user";
     }
 }
