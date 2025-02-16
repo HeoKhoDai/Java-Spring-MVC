@@ -1,5 +1,7 @@
 package com.example.JAVA_SPRING_PHONESHOP.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.example.JAVA_SPRING_PHONESHOP.domain.User;
@@ -19,5 +21,9 @@ public class UserService {
 
     public User handleSaveUser(User user) {
         return this.userRepository.save(user);
+    }
+
+    public List<User> getAllUser() {
+        return this.userRepository.findAll();
     }
 }
