@@ -1,4 +1,4 @@
-package com.example.JAVA_SPRING_PHONESHOP.controller;
+package com.example.JAVA_SPRING_PHONESHOP.controller.admin;
 
 import java.util.List;
 
@@ -38,7 +38,7 @@ public class UserController {
         model.addAttribute("newUser", new User());
         List<User> users = this.userService.getAllUser();
         model.addAttribute("users", users);
-        return "admin/user/table-user";
+        return "admin/user/show";
     }
 
     @RequestMapping("/admin/user/{id}")
@@ -46,7 +46,7 @@ public class UserController {
         User user = this.userService.getUserById(id);
         model.addAttribute("id", id);
         model.addAttribute("user", user);
-        return "admin/user/show";
+        return "admin/user/detail";
     }
 
     @RequestMapping("/admin/user/create")
