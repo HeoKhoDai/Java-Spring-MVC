@@ -6,6 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,10 +66,17 @@ public class UserController {
     }
 
     @PostMapping("/admin/user/create")
-    public String createUserPage(Model model, @ModelAttribute("newUser") @Valid User user, BindingResult bindingResult,
+    public String createUserPage(Model model, @ModelAttribute("newUser") @Valid User user,
+            BindingResult newUserBindingResult,
             @RequestParam("file") MultipartFile file) {
+        List<FieldError> errors = newUserBindingResult.getFieldErrors();
+        for (FieldError error : errors) {
+            System.out.println(">>>>" + error.getField() + " - " + error.getDefaultMessage());
+        }
         // validate
-
+        if (newUserBindingResult.hasErrors()) {
+            return "admin/user/create";
+        }
         //
         String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
         String hashPassword = this.passwordEncoder.encode(user.getPassword());
