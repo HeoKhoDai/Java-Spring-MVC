@@ -1064,7 +1064,7 @@ button:not(:disabled),
 
 
 .text-primary {
-    color: #fff !important
+    color: #000 !important
 }
 
 .text-secondary {

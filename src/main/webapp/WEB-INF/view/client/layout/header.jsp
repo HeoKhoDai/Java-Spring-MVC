@@ -2,8 +2,8 @@
 <div class="container-fluid fixed-top bg-red">
     <div class="container px-0">
         <nav class="navbar navbar-light bg-red navbar-expand-xl">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="text-primary display-6">Phoneshop</h1>
+            <a style="color: #fff;" href="/" class="navbar-brand">
+                <h1 style="color: #fff;" class=" display-6">Phoneshop</h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -11,8 +11,8 @@
             </button>
             <div class="collapse navbar-collapse bg-red" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="shop.html" class="nav-item nav-link">Shop</a>
+                    <a style="color: #fff;" href="/" class="nav-item nav-link">Home</a>
+                    <a style="color: #fff;" href="shop.html" class="nav-item nav-link">Shop</a>
                     <div class="nav-item dropdown">
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <a href="cart.html" class="dropdown-item">Cart</a>
