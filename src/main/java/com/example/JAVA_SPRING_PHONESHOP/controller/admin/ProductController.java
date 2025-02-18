@@ -1,6 +1,7 @@
 package com.example.JAVA_SPRING_PHONESHOP.controller.admin;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -70,7 +71,7 @@ public class ProductController {
         return "admin/product/delete";
     }
 
-    @PostMapping("/admin/product/delte")
+    @PostMapping("/admin/product/delete")
     public String postDeleteProduct(Model model, @ModelAttribute("newProduct") Product product) {
         this.productService.deleteAProduct(product.getId());
         return "redirect:/admin/product";
@@ -95,25 +96,25 @@ public class ProductController {
         //
         Product currentProduct = this.productService.fetchProductById(product.getId()).get();
         if (currentProduct != null) {
-            if (file != null) {
+            if (!file.isEmpty()) {
                 String image = this.uploadService.handleSaveUploadFile(file, "product");
                 product.setImage(image);
             }
+            currentProduct.setName(product.getName());
+            currentProduct.setPrice(product.getPrice());
+            currentProduct.setQuantity(product.getQuantity());
+            currentProduct.setDetailDesc(product.getDetailDesc());
+            currentProduct.setShortDesc(product.getShortDesc());
+            currentProduct.setTarget(product.getTarget());
+            this.productService.createProduct(product);
         }
-        currentProduct.setName(product.getName());
-        currentProduct.setPrice(product.getPrice());
-        currentProduct.setQuantity(product.getQuantity());
-        currentProduct.setDetailDesc(product.getDetailDesc());
-        currentProduct.setShortDesc(product.getShortDesc());
-        currentProduct.setTarget(product.getTarget());
-        this.productService.createProduct(product);
         return "redirect:/admin/product";
     }
 
     @GetMapping("/admin/product/update/{id}")
     public String getUpdateProduct(Model model, @PathVariable long id) {
-        Product currrentProduct = this.productService.fetchProductById(id).get();
-        model.addAttribute("newProduct", currrentProduct);
+        Optional<Product> currrentProduct = this.productService.fetchProductById(id);
+        model.addAttribute("newProduct", currrentProduct.get());
         return "admin/product/update";
     }
 
