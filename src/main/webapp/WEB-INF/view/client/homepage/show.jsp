@@ -5,7 +5,7 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <title>Home Page - Phoneshop</title>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link
@@ -76,7 +76,7 @@
                     <div class="tab-class text-center">
                         <div class="row g-4">
                             <div class="col-lg-4 text-start">
-                                <h1>Our Organic Products</h1>
+                                <h1>Feature Products</h1>
                             </div>
                             <div class="col-lg-8 text-end">
                                 <ul class="nav nav-pills d-inline-flex text-center mb-5">
@@ -84,30 +84,6 @@
                                         <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill"
                                             href="#tab-1">
                                             <span class="text-dark" style="width: 130px;">All Products</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-2">
-                                            <span class="text-dark" style="width: 130px;">Vegetables</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-3">
-                                            <span class="text-dark" style="width: 130px;">Fruits</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-4">
-                                            <span class="text-dark" style="width: 130px;">Bread</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-5">
-                                            <span class="text-dark" style="width: 130px;">Meat</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -134,8 +110,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -157,8 +133,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -180,8 +156,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -203,8 +179,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -226,8 +202,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -249,8 +225,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -272,8 +248,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -295,8 +271,8 @@
                                                         <div class="d-flex justify-content-between flex-lg-wrap">
                                                             <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                             <a href="#"
-                                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                                class="btn border border-secondary rounded-pill px-3"><i
+                                                                    class="fa fa-shopping-bag me-2"></i>
                                                                 Add to cart</a>
                                                         </div>
                                                     </div>
@@ -557,7 +533,7 @@
 
 
             <!-- Copyright Start -->
-            <div class="container-fluid copyright bg-dark py-4">
+            <!-- <div class="container-fluid copyright bg-dark py-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -566,14 +542,14 @@
                         </div>
                         <div class="col-md-6 my-auto text-center text-md-end text-white">
                             <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                            <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                            <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed
+            <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+            <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+            <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed
                             By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Copyright End -->
 
 

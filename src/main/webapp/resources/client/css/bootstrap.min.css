@@ -63,7 +63,7 @@ h1,
 .h1 {
     margin-top: 0;
     margin-bottom: .5rem;
-    font-family: "Raleway", sans-serif;
+    font-family: "Open-Sans", sans-serif;
     font-weight: 600;
     line-height: 1.2;
     color: #45595b
@@ -127,7 +127,7 @@ small,
 
 
 a {
-    color: #81c408;
+    color: #fff;
     text-decoration: none
 }
 
@@ -514,7 +514,7 @@ button:not(:disabled),
 .nav-link {
     display: block;
     padding: .5rem 1rem;
-    color: #81c408;
+    color: #fff;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
 }
 
@@ -739,6 +739,7 @@ button:not(:disabled),
 
 
 .fixed-top {
+    background: var(--bs-red);
     position: fixed;
     top: 0;
     right: 0;
@@ -1063,7 +1064,7 @@ button:not(:disabled),
 
 
 .text-primary {
-    color: #81c408 !important
+    color: #fff !important
 }
 
 .text-secondary {
@@ -1103,7 +1104,7 @@ button:not(:disabled),
 }
 
 .bg-dark {
-    background-color: #45595b !important
+    background-color: #090d14 !important
 }
 
 
@@ -1111,6 +1112,9 @@ button:not(:disabled),
     background-color: #fff !important
 }
 
+.bg-red {
+    background-color: #cb1c22 !important
+}
 
 .rounded {
     border-radius: 10px !important
