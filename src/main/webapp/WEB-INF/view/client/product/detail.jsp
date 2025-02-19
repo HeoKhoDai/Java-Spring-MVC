@@ -27,6 +27,7 @@
                     <!-- Libraries Stylesheet -->
                     <link href="/client/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
                     <link href="/client/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+                    <link href="/css/styles.css" rel="stylesheet" />
 
 
                     <!-- Customized Bootstrap Stylesheet -->
@@ -55,6 +56,14 @@
                     <div class="container-fluid py-5 mt-5">
                         <div class="container py-5">
                             <div class="row g-4 mb-5">
+                                <div>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a style="color: black;" href="/">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Detail Product</li>
+                                        </ol>
+                                    </nav>
+                                </div>
                                 <div class="row g-4">
                                     <div class="col-lg-6">
                                         <div class="border rounded">
