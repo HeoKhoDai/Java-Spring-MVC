@@ -2,12 +2,24 @@ package com.example.JAVA_SPRING_PHONESHOP.domain.dto;
 
 import com.example.JAVA_SPRING_PHONESHOP.service.validator.RegisterChecked;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
+
 @RegisterChecked
 public class RegisterDTO {
+    @Size(min = 1, message = "First name must not be left blank")
     private String firstName;
+
+    @Size(min = 1, message = "Last name must not be left blank")
     private String lastName;
+
+    @Email(message = "Email is not valid", regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
     private String email;
+
+    @Size(min = 1, message = "Password must not be left blank")
     private String password;
+
+    @Size(min = 1, message = "Confirm password must not be left blank")
     private String confirmPassword;
 
     public String getFirstName() {
