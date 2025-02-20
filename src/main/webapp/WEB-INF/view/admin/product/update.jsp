@@ -73,7 +73,7 @@
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label class="form-label">Name:</label>
                                                     <form:input type="text"
-                                                        class="form- form-control ${not empty errorName ? 'is-invalid' : ''}"
+                                                        class="form-control ${not empty errorName ? 'is-invalid' : ''}"
                                                         path="name" />
                                                     ${errorName}
                                                 </div>
@@ -81,7 +81,7 @@
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label class="form-label">Price:</label>
                                                     <form:input type="number"
-                                                        class="form-control form-control ${not empty errorPrice ? 'is-invalid' : ''}"
+                                                        class="form-control ${not empty errorPrice ? 'is-invalid' : ''}"
                                                         path="price" />
                                                     ${errorPrice}
                                                 </div>
@@ -89,7 +89,7 @@
                                                 <div class="mb-3 col-12">
                                                     <label class="form-label">Detail description:</label>
                                                     <form:input type="text"
-                                                        class="form-control form-control ${not empty errorDetailDesc ? 'is-invalid' : ''}"
+                                                        class="form-control ${not empty errorDetailDesc ? 'is-invalid' : ''}"
                                                         path="detailDesc" />
                                                     ${errorDetailDesc}
                                                 </div>
@@ -97,7 +97,7 @@
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label class="form-label">Short description</label>
                                                     <form:input type="text"
-                                                        class="form-control form-control form-control ${not empty errorShortDesc ? 'is-invalid' : ''}"
+                                                        class="form-control ${not empty errorShortDesc ? 'is-invalid' : ''}"
                                                         path="shortDesc" />
                                                     ${errorShortDesc}
                                                 </div>
@@ -105,7 +105,7 @@
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label class="form-label">Quantity</label>
                                                     <form:input type="number"
-                                                        class="form-control form-control form-control ${not empty errorQuantity ? 'is-invalid' : ''}"
+                                                        class="form-control ${not empty errorQuantity ? 'is-invalid' : ''}"
                                                         path="quantity" />
                                                     ${errorQuantity}
                                                 </div>

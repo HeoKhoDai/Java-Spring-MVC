@@ -21,7 +21,12 @@ public class RegisterValidator implements ConstraintValidator<RegisterChecked, R
                     .addConstraintViolation().disableDefaultConstraintViolation();
             valid = false;
         }
+        if (this.userService.checkEmailExist(user.getEmail())) {
+            context.buildConstraintViolationWithTemplate("Email exist").addPropertyNode("email")
+                    .addConstraintViolation().disableDefaultConstraintViolation();
+            valid = false;
 
+        }
         return valid;
     }
 }
