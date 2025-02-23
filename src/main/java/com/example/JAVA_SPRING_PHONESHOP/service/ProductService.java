@@ -5,16 +5,27 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.example.JAVA_SPRING_PHONESHOP.domain.Cart;
+import com.example.JAVA_SPRING_PHONESHOP.domain.CartDetail;
 import com.example.JAVA_SPRING_PHONESHOP.domain.Product;
-
+import com.example.JAVA_SPRING_PHONESHOP.domain.User;
+import com.example.JAVA_SPRING_PHONESHOP.repository.CartDetailRepository;
+import com.example.JAVA_SPRING_PHONESHOP.repository.CartRepository;
 import com.example.JAVA_SPRING_PHONESHOP.repository.ProductRepository;
 
 @Service
 public class ProductService {
     private final ProductRepository productRepository;
+    private final CartRepository cartRepository;
+    private final CartDetailRepository cartDetailRepository;
+    private final UserService userService;
 
-    public ProductService(ProductRepository productRepository) {
+    public ProductService(ProductRepository productRepository, CartRepository cartRepository,
+            CartDetailRepository cartDetailRepository, UserService userService) {
         this.productRepository = productRepository;
+        this.cartRepository = cartRepository;
+        this.cartDetailRepository = cartDetailRepository;
+        this.userService = userService;
     }
 
     public Product createProduct(Product product) {
@@ -31,5 +42,30 @@ public class ProductService {
 
     public void deleteAProduct(long id) {
         this.productRepository.deleteById(id);
+    }
+
+    public void handleAddProductToCart(String email, long productID) {
+        User user = this.userService.getUserByEmail(email);
+        if (user != null) {
+            Cart cart = this.cartRepository.findByUser(user);
+            if (cart == null) {
+                Cart otherCart = new Cart();
+                otherCart.setUser(user);
+                otherCart.setSum(1);
+
+                cart = this.cartRepository.save(otherCart);
+            }
+            Optional<Product> productOptional = this.productRepository.findById(productID);
+            if (productOptional.isPresent()) {
+                Product realProduct = productOptional.get();
+                CartDetail cartDetail = new CartDetail();
+                cartDetail.setCart(cart);
+                cartDetail.setProduct(realProduct);
+                cartDetail.setPrice(realProduct.getPrice());
+                cartDetail.setQuantity(1);
+                this.cartDetailRepository.save(cartDetail);
+            }
+
+        }
     }
 }
