@@ -108,6 +108,8 @@
                                                         <input type="text"
                                                             class="form-control form-control-sm text-center border-0 mx-2"
                                                             value="${cartDetail.quantity}"
+                                                            data-cart-detail-id="${cartDetail.id}"
+                                                            data-cart-detail-price="${cartDetail.price}"
                                                             style="width: 40px; padding: 5px;">
                                                         <div class="input-group-btn">
                                                             <button
@@ -118,7 +120,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <p class="mb-0 mt-4">
+                                                    <p class="mb-0 mt-4" data-cart-detail-id="${cartDetail.id}">
                                                         <fmt:formatNumber type="number"
                                                             value="${cartDetail.product.price * cartDetail.quantity}" />
                                                         $
@@ -141,7 +143,7 @@
                                             <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
                                             <div class="d-flex justify-content-between mb-4">
                                                 <h5 class="mb-0 me-4">Subtotal:</h5>
-                                                <p class="mb-0">
+                                                <p class="mb-0" data-cart-total-price="${totalPrice}">
                                                     <fmt:formatNumber type="number" value="${totalPrice}" />$
                                                 </p>
                                             </div>
@@ -155,7 +157,7 @@
                                         </div>
                                         <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                                             <h5 class="mb-0 ps-4 me-4">Total</h5>
-                                            <p class="mb-0 pe-4">
+                                            <p class="mb-0 pe-4" data-cart-total-price="${totalPrice}">
                                                 <fmt:formatNumber type="number" value="${totalPrice}" />$
                                             </p>
                                         </div>

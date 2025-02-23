@@ -1804,3 +1804,7 @@ btn-check:checked+.btn-primary,
 .justify-content-start {
     justify-content: flex-start !important
 }
+
+.pe-4 {
+    padding-right: 1.5rem !important
+}
