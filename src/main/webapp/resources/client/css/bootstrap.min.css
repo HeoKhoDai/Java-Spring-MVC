@@ -303,6 +303,11 @@ button:not(:disabled),
 }
 
 
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
 @media(min-width: 768px) {
 
 
@@ -1790,4 +1795,12 @@ btn-check:checked+.btn-primary,
     .flex-lg-wrap {
         flex-wrap: wrap !important
     }
+}
+
+.ps-4 {
+    padding-left: 1.5rem !important
+}
+
+.justify-content-start {
+    justify-content: flex-start !important
 }

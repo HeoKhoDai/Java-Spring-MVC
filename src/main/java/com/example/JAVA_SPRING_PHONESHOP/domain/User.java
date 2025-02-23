@@ -43,6 +43,14 @@ public class User {
     @JoinColumn(name = "role_id")
     private Role role;
 
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
     @OneToMany(mappedBy = "user")
     List<Order> orders;
 
