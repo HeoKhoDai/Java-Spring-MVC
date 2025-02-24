@@ -5,7 +5,7 @@
             <div class="row g-4">
                 <div class="col-lg-3">
                     <a href="#">
-                        <h1 class="text-primary mb-0">Phoneshop</h1>
+                        <h1 style="color: aliceblue;" class="mb-0">Phoneshop</h1>
                     </a>
                 </div>
                 <div class="col-lg-3">

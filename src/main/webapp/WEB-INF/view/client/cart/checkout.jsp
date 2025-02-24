@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-            <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+            <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
                 <html lang="en">
 
                 <head>
@@ -160,80 +160,54 @@
                                                 <label>Your address</label>
                                                 <input class="form-control" name="receiverAddress" required>
                                             </div>
-                                        </div>
-                                        <div class="col-12 form-group mb-3">
-                                            <label>Your phone number</label>
-                                            <input class="form-control" name="receiverPhone" required>
-                                        </div>
-                                        <div class="mt-4">
-                                            <i class="fas fa-arrow-left"></i>
-                                            <a style="color: red;" href="/cart">Back to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    </form:form>
-
-
-
-                    <div class="mt-5 row g-4 justify-content-start">
-                        <div class="col-12 col-md-8">
-                            <div class="bg-light rounded">
-                                <div class="p-4">
-                                    <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
-                                    <div class="d-flex justify-content-between mb-4">
-                                        <h5 class="mb-0 me-4">Subtotal:</h5>
-                                        <p class="mb-0" data-cart-total-price="${totalPrice}">
-                                            <fmt:formatNumber type="number" value="${totalPrice}" />$
-                                        </p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <h5 class="mb-0 me-4">Shipping</h5>
-                                        <div class="">
-                                            <p class="mb-0">0 $</p>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0 text-end">Shipping to Ukraine.</p>
-                                </div>
-                                <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
-                                    <h5 class="mb-0 ps-4 me-4">Total</h5>
-                                    <p class="mb-0 pe-4" data-cart-total-price="${totalPrice}">
-                                        <fmt:formatNumber type="number" value="${totalPrice}" />$
-                                    </p>
-                                </div>
-
-                                <form:form action="/confirm-checkout" method="post" modelAttribute="cart">
-                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                                    <div style="display: none;">
-                                        <c:forEach var="cartDetail" items="${cart.cartDetails}" varStatus="status">
-                                            <div class="mb-3">
-                                                <div class="form-group">
-                                                    <label>Id</label>
-                                                    <form:input class="form-control" type="text"
-                                                        value="${cartDetail.id}"
-                                                        path="cartDetails[${status.index}].id" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Quantity</label>
-                                                    <form:input class="form-control" type="text"
-                                                        value="${cartDetail.quantity}"
-                                                        path="cartDetails[${status.index}].quantity" />
-                                                </div>
+                                            <div class="col-12 form-group mb-3">
+                                                <label>Your phone number</label>
+                                                <input class="form-control" name="receiverPhone" required>
                                             </div>
-                                        </c:forEach>
+                                            <div class="mt-4">
+                                                <i class="fas fa-arrow-left"></i>
+                                                <a style="color: red;" href="/cart">Back to cart</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button
-                                        class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4"
-                                        type="button">Place Order</button>
-                                </form:form>
+                                    <div class="col-12 col-md-6 ">
+                                        <div class="bg-light rounded">
+                                            <div class="p-4">
+                                                <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span>
+                                                </h1>
+                                                <div class="d-flex justify-content-between mb-4">
+                                                    <h5 class="mb-0 me-4">Subtotal:</h5>
+                                                    <p class="mb-0" data-cart-total-price="${totalPrice}">
+                                                        <fmt:formatNumber type="number" value="${totalPrice}" />$
+                                                    </p>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="mb-0 me-4">Shipping</h5>
+                                                    <div class="">
+                                                        <p class="mb-0">0 $</p>
+                                                    </div>
+                                                </div>
 
-
-                            </div>
+                                            </div>
+                                            <div
+                                                class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
+                                                <h5 class="mb-0 ps-4 me-4">Total</h5>
+                                                <p class="mb-0 pe-4" data-cart-total-price="${totalPrice}">
+                                                    <fmt:formatNumber type="number" value="${totalPrice}" />$
+                                                </p>
+                                            </div>
+                                            <button
+                                                class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">Place
+                                                Order</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form:form>
                         </div>
                     </div>
-                    </div>
-                    </div>
+
+
+
                     <!-- Cart Page End -->
 
 
@@ -247,7 +221,7 @@
                     <!-- JavaScript Libraries -->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-                    <script src="lib/easing/easing.min.js"></script>
+                    <script src="/client/lib/easing/easing.min.js"></script>
                     <script src="/client/lib/waypoints/waypoints.min.js"></script>
                     <script src="/client/lib/lightbox/js/lightbox.min.js"></script>
                     <script src="/client/lib/owlcarousel/owl.carousel.min.js"></script>

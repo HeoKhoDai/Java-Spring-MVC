@@ -24,6 +24,10 @@ public class CartDetail {
     @JoinColumn(name = "cart_id")
     private Cart cart;
 
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
     public long getId() {
         return id;
     }
@@ -63,8 +67,4 @@ public class CartDetail {
     public void setProduct(Product product) {
         this.product = product;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
 }

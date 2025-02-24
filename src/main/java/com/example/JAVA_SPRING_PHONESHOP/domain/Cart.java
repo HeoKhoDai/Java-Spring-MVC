@@ -22,12 +22,12 @@ public class Cart {
     @Min(value = 0)
     private int sum;
 
-    @OneToOne
+    @OneToOne()
     @JoinColumn(name = "user_id")
     private User user;
 
     @OneToMany(mappedBy = "cart")
-    List<CartDetail> cartDetails;
+    private List<CartDetail> cartDetails;
 
     public long getId() {
         return id;

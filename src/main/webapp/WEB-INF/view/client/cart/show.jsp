@@ -1,12 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-            <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+            <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
                 <html lang="en">
 
                 <head>
                     <meta charset="utf-8">
-                    <title>${product.name} - Phoneshop</title>
+                    <title>Cart - Phoneshop</title>
                     <meta content="width=device-width, initial-scale=1.0" name="viewport">
                     <meta content="" name="keywords">
                     <meta content="" name="description">
@@ -158,7 +158,6 @@
                                                     <p class="mb-0">0 $</p>
                                                 </div>
                                             </div>
-                                            <p class="mb-0 text-end">Shipping to Ukraine.</p>
                                         </div>
                                         <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                                             <h5 class="mb-0 ps-4 me-4">Total</h5>
@@ -188,11 +187,9 @@
                                                     </div>
                                                 </c:forEach>
                                             </div>
-                                            <div class="d-grid">
-                                                <button
-                                                    class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">Proceed
-                                                    Checkout</button>
-                                            </div>
+                                            <button
+                                                class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">Proceed
+                                                Checkout</button>
                                         </form:form>
                                     </div>
                                 </div>
@@ -212,7 +209,7 @@
                     <!-- JavaScript Libraries -->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-                    <script src="lib/easing/easing.min.js"></script>
+                    <script src="/client/lib/easing/easing.min.js"></script>
                     <script src="/client/lib/waypoints/waypoints.min.js"></script>
                     <script src="/client/lib/lightbox/js/lightbox.min.js"></script>
                     <script src="/client/lib/owlcarousel/owl.carousel.min.js"></script>

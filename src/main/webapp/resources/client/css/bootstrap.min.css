@@ -1532,6 +1532,10 @@ btn-check:checked+.btn-primary,
     margin-bottom: auto !important
 }
 
+.mt-4 {
+    margin-top: 1.5rem !important
+}
+
 
 .mt-5 {
     margin-top: 3rem !important
