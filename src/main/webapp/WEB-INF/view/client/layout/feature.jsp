@@ -9,7 +9,7 @@
                     </div>
                     <div class="featurs-content text-center">
                         <h5>Free Shipping</h5>
-                        <p class="mb-0">Free on order over $300</p>
+                        <p class="mb-0">Free on order over $10</p>
                     </div>
                 </div>
             </div>

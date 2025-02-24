@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.JAVA_SPRING_PHONESHOP.domain.Order;
 import com.example.JAVA_SPRING_PHONESHOP.domain.OrderDetail;
+import com.example.JAVA_SPRING_PHONESHOP.domain.User;
 import com.example.JAVA_SPRING_PHONESHOP.repository.OrderDetailRepository;
 import com.example.JAVA_SPRING_PHONESHOP.repository.OrderRepository;
 
@@ -47,5 +48,9 @@ public class OrderService {
             currentOrder.setStatus(order.getStatus());
             this.orderRepository.save(currentOrder);
         }
+    }
+
+    public List<Order> fetchOrderByUser(User user) {
+        return this.orderRepository.findByUser(user);
     }
 }
