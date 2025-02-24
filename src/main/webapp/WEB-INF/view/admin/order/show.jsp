@@ -21,12 +21,50 @@
                 <div id="layoutSidenav_content">
                     <main>
                         <div class="container-fluid px-4">
-                            <h1 class="mt-4">Manage Orders</h1>
+                            <h1 class="mt-4">Manage Order</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Orders</li>
+                                <li class="breadcrumb-item active">Order</li>
                             </ol>
-                            <div>table order</div>
+                            <div class=" mt-5">
+                                <div class="row">
+                                    <div class="col-12 mx-auto">
+
+                                        <hr />
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Total Price</th>
+                                                    <th>User</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <c:forEach var="order" items="${orders}">
+                                                    <tr>
+                                                        <th>${order.id}</th>
+                                                        <td>${order.totalPrice} $</td>
+                                                        <td>${order.user.fullName}</td>
+                                                        <td>${order.status}</td>
+                                                        <td>
+                                                            <a href="/admin/order/${order.id}"
+                                                                class="btn btn-success">View</a>
+                                                            <a href="/admin/order/update/${order.id}"
+                                                                class="btn btn-warning">Update</a>
+                                                            <a href="/admin/order/delete/${order.id}"
+                                                                class="btn btn-danger">Delete</a>
+                                                        </td>
+                                                    </tr>
+                                                </c:forEach>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </main>
                     <jsp:include page="../layout/footer.jsp" />
