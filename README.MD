@@ -27,9 +27,13 @@ Database: MySQL
 Dự án được chạy tại localhost và không triển khai lên hosting
 Import dữ liệu tạo sẵn trong folder database
 - Tài khoản demo || Role User
+
 user@gmail.com
+
 123456
 
 - Tài khoản demo || Role Admin
+
 admin@gmail.com
+
 123456
