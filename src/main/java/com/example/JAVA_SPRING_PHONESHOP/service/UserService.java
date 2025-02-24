@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import com.example.JAVA_SPRING_PHONESHOP.domain.Role;
 import com.example.JAVA_SPRING_PHONESHOP.domain.User;
 import com.example.JAVA_SPRING_PHONESHOP.domain.dto.RegisterDTO;
+import com.example.JAVA_SPRING_PHONESHOP.repository.OrderRepository;
+import com.example.JAVA_SPRING_PHONESHOP.repository.ProductRepository;
 import com.example.JAVA_SPRING_PHONESHOP.repository.RoleRepository;
 import com.example.JAVA_SPRING_PHONESHOP.repository.UserRepository;
 
@@ -14,10 +16,15 @@ import com.example.JAVA_SPRING_PHONESHOP.repository.UserRepository;
 public class UserService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
+    private final ProductRepository productRepository;
+    private final OrderRepository orderRepository;
 
-    public UserService(UserRepository userRepository, RoleRepository roleRepository) {
+    public UserService(UserRepository userRepository, RoleRepository roleRepository,
+            ProductRepository productRepository, OrderRepository orderRepository) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
+        this.productRepository = productRepository;
+        this.orderRepository = orderRepository;
     }
 
     public User handleSaveUser(User user) {
@@ -55,4 +62,17 @@ public class UserService {
     public User getUserByEmail(String email) {
         return this.userRepository.findByEmail(email);
     }
+
+    public long countUsers() {
+        return this.userRepository.count();
+    }
+
+    public long countProducts() {
+        return this.productRepository.count();
+    }
+
+    public long countOrders() {
+        return this.orderRepository.count();
+    }
+
 }

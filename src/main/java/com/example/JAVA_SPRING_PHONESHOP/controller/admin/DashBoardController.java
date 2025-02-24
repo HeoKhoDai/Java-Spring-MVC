@@ -1,13 +1,25 @@
 package com.example.JAVA_SPRING_PHONESHOP.controller.admin;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.JAVA_SPRING_PHONESHOP.service.UserService;
 
 @Controller
 public class DashBoardController {
 
+    private final UserService userService;
+
+    public DashBoardController(UserService userService) {
+        this.userService = userService;
+    }
+
     @GetMapping("/admin")
-    public String getDashBoard() {
+    public String getDashBoard(Model model) {
+        model.addAttribute("countUsers", userService.countUsers());
+        model.addAttribute("countProducts", userService.countProducts());
+        model.addAttribute("countOrders", userService.countOrders());
         return "admin/dashboard/show";
     }
 }

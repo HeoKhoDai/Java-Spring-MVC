@@ -764,6 +764,11 @@ progress {
     width: 25%;
   }
 
+  .col-xl-4 {
+    flex: 0 0 auto;
+    width: 33%;
+  }
+
   .col-xl-6 {
     flex: 0 0 auto;
     width: 50%;
